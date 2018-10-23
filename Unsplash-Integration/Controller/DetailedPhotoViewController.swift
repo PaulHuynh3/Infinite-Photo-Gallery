@@ -11,18 +11,18 @@ import UIKit
 class DetailedPhotoViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
-    @IBOutlet weak var nameLabel: UILabel!
     
     var unsplashArray: [UnsplashImageSourceViewModel]!
     var initialImageIndex: Int?
-    var photographerName: String?
     var lastPhotoPositionDelegate: LastPhotoPositionDelegate?
     var currentImageIndex: Int?
     
-    fileprivate let unsplashCellIdentifier = "cellIdentifier"
+    fileprivate let unsplashCellIdentifier = "UnsplashDetailedCollectionviewCell"
     
-    override func viewDidLoad() {
-        registerUnsplashCollectionViewCell(cellIdentifier: unsplashCellIdentifier)
+    override func viewDidDisappear(_ animated: Bool) {
+        if let currentImageIndex = currentImageIndex {
+            lastPhotoPositionDelegate?.scrollToCurrentIndex(currentImageIndex)
+        }
     }
     
     override func viewDidLayoutSubviews() {
@@ -38,13 +38,6 @@ class DetailedPhotoViewController: UIViewController {
         let cell = UINib(nibName: cellIdentifier, bundle: nil)
         if let collectionView = collectionView {
             collectionView.register(cell, forCellWithReuseIdentifier: cellIdentifier)
-        }
-    }
-    
-    @IBAction func exitFullScreenTapped(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
-        if let currentImageIndex = currentImageIndex {
-            lastPhotoPositionDelegate?.scrollToCurrentIndex(currentImageIndex)
         }
     }
 }

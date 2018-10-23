@@ -15,6 +15,9 @@ struct UnsplashImageSourceViewModel {
     let photographerName: String
     let photoId: String
     
+    
+    //Dependency Injection
+    //Perform logic check in here
     init(unsplashImageSource: UnsplashImageSource) {
         self.imageString = unsplashImageSource.imageString
         self.photographerName = unsplashImageSource.photographerName

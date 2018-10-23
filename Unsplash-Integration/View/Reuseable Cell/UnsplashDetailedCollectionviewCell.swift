@@ -14,7 +14,6 @@ class UnsplashDetailedCollectionviewCell: UICollectionViewCell {
     @IBOutlet weak var unsplashImage: UIImageView!
     @IBOutlet weak var photographerName: UILabel!
     
-    
     var unsplashImageSourceViewModel: UnsplashImageSourceViewModel! {
         didSet{
             unsplashImage.loadImageUsingCacheWithUrlString(urlString: unsplashImageSourceViewModel.imageString)
