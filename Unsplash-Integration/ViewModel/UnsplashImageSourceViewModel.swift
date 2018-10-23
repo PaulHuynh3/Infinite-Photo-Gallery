@@ -18,6 +18,7 @@ struct UnsplashImageSourceViewModel {
     
     //Dependency Injection
     //Perform logic check in here
+    //easier for Unit Testing
     init(unsplashImageSource: UnsplashImageSource) {
         self.imageString = unsplashImageSource.imageString
         self.photographerName = unsplashImageSource.photographerName

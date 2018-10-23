@@ -14,7 +14,7 @@ protocol LastPhotoPositionDelegate {
 
 class CuratedPhotosCollectionViewController: UICollectionViewController {
     fileprivate let unsplashCellIdentifier = "UnsplashPhotoCollectionViewCell"
-    fileprivate var unsplashArray = [UnsplashImageSourceViewModel]()
+    fileprivate var unsplashViewModelArray = [UnsplashImageSourceViewModel]()
     var currentPageNumber = 1
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,12 +24,12 @@ class CuratedPhotosCollectionViewController: UICollectionViewController {
 
     // MARK: UICollectionViewDataSource
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return unsplashArray.count
+        return unsplashViewModelArray.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: unsplashCellIdentifier, for: indexPath) as! UnsplashPhotoCollectionViewCell
-        let unsplashImageSourceViewModel = unsplashArray[indexPath.row]
+        let unsplashImageSourceViewModel = unsplashViewModelArray[indexPath.row]
         cell.unsplashimageSourceViewModel = unsplashImageSourceViewModel
         return cell
     }
@@ -39,7 +39,7 @@ class CuratedPhotosCollectionViewController: UICollectionViewController {
         let storyboardId = "DetailedPhotoViewController"
         let storyboard = UIStoryboard(name: storyboardName, bundle: nil)
         let detailedPhotoCollectionViewController = storyboard.instantiateViewController(withIdentifier: storyboardId) as! DetailedPhotoViewController
-        detailedPhotoCollectionViewController.unsplashArray = unsplashArray
+        detailedPhotoCollectionViewController.unsplashArray = unsplashViewModelArray
         detailedPhotoCollectionViewController.initialImageIndex = indexPath.row
         detailedPhotoCollectionViewController.lastPhotoPositionDelegate = self
         navigationController?.pushViewController(detailedPhotoCollectionViewController, animated: true)
@@ -64,7 +64,7 @@ class CuratedPhotosCollectionViewController: UICollectionViewController {
             }
             let unsplashImageViewModel = unsplashArray?.map({return UnsplashImageSourceViewModel(unsplashImageSource: $0)}) ?? []
             
-            strongSelf.unsplashArray += unsplashImageViewModel
+            strongSelf.unsplashViewModelArray += unsplashImageViewModel
             strongSelf.collectionView?.reloadData()
         }
     }

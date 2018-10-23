@@ -38,11 +38,11 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Unsplash-Integration/Controller/CuratedPhotosCollectionViewController.swift"
-            timestampString = "561956937.7172101"
+            timestampString = "561964917.6121089"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "65"
@@ -51,14 +51,14 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  shouldBeEnabled = "No"
+                  shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "closure #1 (Swift.Optional&lt;Swift.Array&lt;Unsplash_coding_challenge.UnsplashImageSource&gt;&gt;, Swift.Optional&lt;Swift.String&gt;) -&gt; () in Unsplash_coding_challenge.CuratedPhotosCollectionViewController.(retrieveCuratedPhotos in _E6C0ED9ED0292C8EAE8084BCCEA0FBEE)(Swift.Int) -&gt; ()"
                   moduleName = "Unsplash-coding-challenge"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/a/Desktop/Projects/Infinite-Photo-Gallery/Unsplash-Integration/Controller/CuratedPhotosCollectionViewController.swift"
-                  timestampString = "561953742.265121"
+                  timestampString = "561964917.817029"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "65"
@@ -66,14 +66,14 @@
                   offsetFromSymbolStart = "581">
                </Location>
                <Location
-                  shouldBeEnabled = "No"
+                  shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "closure #1 (Unsplash_coding_challenge.UnsplashImageSource) -&gt; Unsplash_coding_challenge.UnsplashImageSourceViewModel in closure #1 (Swift.Optional&lt;Swift.Array&lt;Unsplash_coding_challenge.UnsplashImageSource&gt;&gt;, Swift.Optional&lt;Swift.String&gt;) -&gt; () in Unsplash_coding_challenge.CuratedPhotosCollectionViewController.(retrieveCuratedPhotos in _E6C0ED9ED0292C8EAE8084BCCEA0FBEE)(Swift.Int) -&gt; ()"
                   moduleName = "Unsplash-coding-challenge"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/a/Desktop/Projects/Infinite-Photo-Gallery/Unsplash-Integration/Controller/CuratedPhotosCollectionViewController.swift"
-                  timestampString = "561953742.269184"
+                  timestampString = "561964917.8198349"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "65"
@@ -97,6 +97,70 @@
             endingLineNumber = "14"
             landmarkName = "unsplashimageSourceViewModel"
             landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Unsplash-Integration/ViewModel/UnsplashImageSourceViewModel.swift"
+            timestampString = "561964917.613006"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "init(unsplashImageSource:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Unsplash-Integration/View/Reuseable Cell/UnsplashPhotoCollectionViewCell.swift"
+            timestampString = "561964677.397331"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "unsplashimageSourceViewModel"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Unsplash_coding_challenge.UnsplashPhotoCollectionViewCell.init(frame: __C.CGRect) -&gt; Unsplash_coding_challenge.UnsplashPhotoCollectionViewCell"
+                  moduleName = "Unsplash-coding-challenge"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/a/Desktop/Projects/Infinite-Photo-Gallery/Unsplash-Integration/View/Reuseable%20Cell/UnsplashPhotoCollectionViewCell.swift"
+                  timestampString = "561964917.842316"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "43">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Unsplash_coding_challenge.UnsplashPhotoCollectionViewCell.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;Unsplash_coding_challenge.UnsplashPhotoCollectionViewCell&gt;"
+                  moduleName = "Unsplash-coding-challenge"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/a/Desktop/Projects/Infinite-Photo-Gallery/Unsplash-Integration/View/Reuseable%20Cell/UnsplashPhotoCollectionViewCell.swift"
+                  timestampString = "561964917.845072"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "50">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
