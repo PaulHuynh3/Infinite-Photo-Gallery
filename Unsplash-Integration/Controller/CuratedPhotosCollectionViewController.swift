@@ -14,7 +14,7 @@ protocol LastPhotoPositionDelegate {
 
 class CuratedPhotosCollectionViewController: UICollectionViewController {
     fileprivate let unsplashCellIdentifier = "UnsplashPhotoCollectionViewCell"
-    fileprivate var unsplashArray = [UnsplashImageSource]()
+    fileprivate var unsplashArray = [UnsplashImageSourceViewModel]()
     var currentPageNumber = 1
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,8 +29,8 @@ class CuratedPhotosCollectionViewController: UICollectionViewController {
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: unsplashCellIdentifier, for: indexPath) as! UnsplashPhotoCollectionViewCell
-        let imageString = unsplashArray[indexPath.row].imageString
-        cell.unsplashImage.loadImageUsingCacheWithUrlString(urlString: imageString)
+        let unsplashImageSourceViewModel = unsplashArray[indexPath.row]
+        cell.unsplashimageSourceViewModel = unsplashImageSourceViewModel
         return cell
     }
     
@@ -42,7 +42,7 @@ class CuratedPhotosCollectionViewController: UICollectionViewController {
         detailedPhotoCollectionViewController.unsplashArray = unsplashArray
         detailedPhotoCollectionViewController.initialImageIndex = indexPath.row
         detailedPhotoCollectionViewController.lastPhotoPositionDelegate = self
-        self.present(detailedPhotoCollectionViewController, animated: false)
+        navigationController?.pushViewController(detailedPhotoCollectionViewController, animated: true)
     }
 
     // MARK: Private Methods
@@ -62,9 +62,9 @@ class CuratedPhotosCollectionViewController: UICollectionViewController {
                 strongSelf.showAlert(title: errorTitle, message: error, actionTitle: actionTitle)
                 return
             }
-            if let unsplashObjects = unsplashArray {
-                strongSelf.unsplashArray += unsplashObjects
-            }
+            let unsplashImageViewModel = unsplashArray?.map({return UnsplashImageSourceViewModel(unsplashImageSource: $0)}) ?? []
+            
+            strongSelf.unsplashArray += unsplashImageViewModel
             strongSelf.collectionView?.reloadData()
         }
     }

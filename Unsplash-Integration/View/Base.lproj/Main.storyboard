@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Lsg-JO-mKd">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Lsg-JO-mKd">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -62,21 +61,9 @@
                             </collectionView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l8d-Yk-hYj" userLabel="header">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="30"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gQw-sC-1Z8" userLabel="exit">
-                                        <rect key="frame" x="18" y="10" width="30" height="20"/>
-                                        <state key="normal" title="X"/>
-                                        <connections>
-                                            <action selector="exitFullScreenTapped:" destination="ZBO-cG-nZ0" eventType="touchUpInside" id="B0u-EE-Kjc"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="gQw-sC-1Z8" secondAttribute="bottom" id="f2E-AX-aCd"/>
-                                    <constraint firstItem="gQw-sC-1Z8" firstAttribute="top" secondItem="l8d-Yk-hYj" secondAttribute="top" constant="10" id="fz0-s8-WfO"/>
                                     <constraint firstAttribute="height" constant="30" id="v2h-8B-q0G"/>
-                                    <constraint firstItem="gQw-sC-1Z8" firstAttribute="leading" secondItem="l8d-Yk-hYj" secondAttribute="leading" constant="18" id="wuY-uq-u3m"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lis-Ne-IwL" userLabel="footer">

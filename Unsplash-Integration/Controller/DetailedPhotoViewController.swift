@@ -12,13 +12,18 @@ class DetailedPhotoViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var nameLabel: UILabel!
-    var unsplashArray: [UnsplashImageSource]!
+    
+    var unsplashArray: [UnsplashImageSourceViewModel]!
     var initialImageIndex: Int?
     var photographerName: String?
     var lastPhotoPositionDelegate: LastPhotoPositionDelegate?
     var currentImageIndex: Int?
     
-    fileprivate let unsplashCellIdentifier = "UnsplashPhotoCollectionViewCell"
+    fileprivate let unsplashCellIdentifier = "cellIdentifier"
+    
+    override func viewDidLoad() {
+        registerUnsplashCollectionViewCell(cellIdentifier: unsplashCellIdentifier)
+    }
     
     override func viewDidLayoutSubviews() {
         registerUnsplashCollectionViewCell(cellIdentifier: unsplashCellIdentifier)
@@ -51,11 +56,10 @@ extension DetailedPhotoViewController: UICollectionViewDataSource {
     }
     
      func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: unsplashCellIdentifier, for: indexPath) as! UnsplashPhotoCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: unsplashCellIdentifier, for: indexPath) as! UnsplashDetailedCollectionviewCell
         let unsplashItem = unsplashArray[indexPath.row]
-        nameLabel.text = unsplashItem.photographerName
         currentImageIndex = indexPath.row
-        cell.unsplashImage.loadImageUsingCacheWithUrlString(urlString: unsplashItem.imageString)
+        cell.unsplashImageSourceViewModel = unsplashItem
         return cell
     }
 }

@@ -10,6 +10,12 @@ import UIKit
 
 class UnsplashPhotoCollectionViewCell: UICollectionViewCell {
     
+    var unsplashimageSourceViewModel: UnsplashImageSourceViewModel! {
+        didSet {
+            unsplashImage.loadImageUsingCacheWithUrlString(urlString: unsplashimageSourceViewModel.imageString)
+        }
+    }
+    
     @IBOutlet weak var unsplashImage: UIImageView!
     
 }
